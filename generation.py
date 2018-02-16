@@ -1,6 +1,8 @@
 Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
 Type "copyright", "credits" or "license()" for more information.
->>> def html_gen(title, body, text_color, bg_color, bold, italic, size):
+>>> 
+# функция генерации
+def html_gen(title, body, text_color, bg_color, bold, italic, size):
     output = "<html>"
     output += "<title>" + title + "</title>"
     output += "<body>"
@@ -22,20 +24,22 @@ Type "copyright", "credits" or "license()" for more information.
     output += "</body>"
     output += "</html>"
 
-    f = open('rakh_page.html', 'w')
+    f = open('akkulov_page.html', 'w')
     f.write(output)
     f.close()
 
 def main():
+    # RGB код интересующего Вас цвета
+    # https://www.rapidtables.com/web/color/RGB_Color.html
+
 ############################################################################
-#               ПАРАМЕТРЫ ГЕНЕРАЦИИ
-    page_title = "POLYTECH" # заголовок
-    page_body = "UNIVERSITY OF COMMUNICATION AND TELECOMMUNICATIONS"
-  # текст документа
+#               ПАРАМЕТРЫ ГЕНЕРАЦИИ ПОЗОРНОГО HTML ДОКУМЕНТА
+    page_title = "ИФНиТ" # заголовок
+    page_body = "ИНСТИТУТ ФИЗИКИ, НАНОТЕХНОЛОГИЙ И ТЕЛЕКОММУНИКАЦИЙ" # текст документа
     text_color = "000000"  # цвет текста в документе
     bg_color = "BECFFF"  # цвет фона в документе
-    bold_text = "1" # жирный шрифт (0-1)
-    italic_text = "0" # курсивный шрифт (0-1)
+    bold_text = 1 # жирный шрифт (0-1)
+    italic_text = 0 # курсивный шрифт (0-1)
     text_size = "3"  # размер текста (0-7)
 ############################################################################
 
